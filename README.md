@@ -1,123 +1,359 @@
-Slate
-========
+**Daux.io** is an documentation generator that uses a simple folder structure and Markdown files to create custom documentation on the fly. It helps you create great looking documentation in a developer friendly way.
 
-[![Build Status](https://travis-ci.org/tripit/slate.svg?branch=master)](https://travis-ci.org/tripit/slate) [![Dependency Status](https://gemnasium.com/tripit/slate.png)](https://gemnasium.com/tripit/slate)
+## Features
 
-Slate helps you create beautiful API documentation. Think of it as an intelligent, responsive documentation template for your API.
+* 100% Mobile Responsive
+* Supports GitHub Flavored Markdown
+* Auto created homepage/landing page
+* Auto Syntax Highlighting
+* Auto Generated Navigation
+* 4 Built-In Themes or roll your own
+* Functional, Flat Design Style
+* Shareable/Linkable SEO Friendly URLs
+* Built On Bootstrap
+* No Build Step
+* Git/SVN Friendly
+* Supports Google Analytics and Piwik Analytics
+* Optional code float layout
+* Static Output Generation
 
-<img src="https://dl.dropboxusercontent.com/u/95847291/github%20images/slate/slate_screenshot_new.png" width=700 alt="Screenshot of Example Documentation created with Slate">
+## Demos
 
-*The example above was created with Slate. Check it out at [tripit.github.io/slate](http://tripit.github.io/slate).*
+This is a list of sites using Daux.io:
 
-Features
-------------
+* [Daux.io](http://daux.io)
+* [Gltn - An open-source word processor webapp](http://felkerdigitalmedia.com/gltn/docs/)
+* [Invade & Annex 3 - An Arma 3 Co-operative Mission](http://ia3.ahoyworld.co.uk/)
+* [Munee: Standalone PHP 5.3 Asset Optimisation & Manipulation](http://mun.ee)
+* [ICADMIN: An admin panel powered by CodeIgniter.](http://istocode.com/shared/ic-admin/)
+* [TrackJs](http://docs.trackjs.com) (uses a customized theme)
+* [Sugoi](http://doc.sugoi.ventrux.com/)
+* [wallabag](http://doc.wallabag.org/index)
+* [iGeo-Topo](http://igeo-topo.fr/doc)
+* [Cumulus TV: Android TV app that turns any stream/page into a Live Channel](http://cumulustv.herokuapp.com)
 
-* **Clean, intuitive design** — with Slate, the description of your API is on the left side of your documentation, and all the code examples are on the right side. Inspired by [Stripe's](https://stripe.com/docs/api) and [Paypal's](https://developer.paypal.com/webapps/developer/docs/api/) API docs. Slate is responsive, so it looks great on tablets, phones, and even print.
+Do you use Daux.io? Send me a pull request or open an [issue](https://github.com/justinwalsh/daux.io/issues) and I will add you to the list.
 
-* **Everything on a single page** — gone are the days where your users had to search through a million pages to find what they wanted. Slate puts the entire documentation on a single page. We haven't sacrificed linkability, though. As you scroll, your browser's hash will update to the nearest header, so linking to a particular point in the documentation is still natural and easy.
+## Download
 
-* **Slate is just Markdown** — when you write docs with Slate, you're just writing Markdown, which makes it simple to edit and understand. Everything is written in Markdown — even the code samples are just Markdown code blocks!
+Download this repository as a zip, and unpack. Copy the files to a web server that can run PHP 5.4 or greater. You can also run the documentation locally using Grunt.js, which is covered at the end of this readme.
 
-* **Write code samples in multiple languages** — if your API has bindings in multiple programming languages, you easily put in tabs to switch between them. In your document, you'll distinguish different languages by specifying the language name at the top of each code block, just like with Github Flavored Markdown!
+## Folders
 
-* **Out-of-the-box syntax highlighting** for [almost 60 languages](http://rouge.jayferd.us/demo), no configuration required.
+By default, the generator will look for folders in the `docs` folder. Add your folders inside the `docs` folder. This project contains some example folders and files to get you started.
 
-* **Automatic, smoothly scrolling table of contents** on the far left of the page. As you scroll, it displays your current position in the document. It's fast, too. We're using Slate at TripIt to build documentation for our new API, where our table of contents has over 180 entries. We've made sure that the performance remains excellent, even for larger documents.
+You can nest folders any number of levels to get the exact structure you want. The folder structure will be converted to the nested navigation.
 
-* **Let your users update your documentation for you** — by default, your Slate-generated documentation is hosted in a public Github repository. Not only does this mean you get free hosting for your docs with Github Pages, but it also makes it's simple for other developers to make pull requests to your docs if they find typos or other problems. Of course, if you don't want to, you're welcome to not use Github and host your docs elsewhere!
+If you'd prefer to keep your docs somewhere else (like outside of the daux.io root directory) you can specify your docs path in the `global.json` file.
 
-Getting starting with Slate is super easy! Simply fork this repository, and then follow the instructions below. Or, if you'd like to check out what Slate is capable of, take a look at the [sample docs](http://tripit.github.io/slate).
+## Files
 
-<!--As an example, you can check out the [TripIt API docs](http://tripit.github.io/api), which we create with Slate. You can also view the source of the [markdown file used to generate it](http://github.com/tripit/api/blob/master/source/index.md).-->
+The generator will look for Markdown files (`*.md` and `*.markdown`) inside the `docs` folder and any of the subfolders within `docs`. Additional extensions can be added by editing `global.json`
 
-Getting Started with Slate
-------------------------------
+You must use underscores instead of spaces. Here are some example file names and what they will be converted to:
 
-### Prerequisites
+**Good:**
 
-You're going to need:
+* 01_Getting_Started.md = Getting Started
+* API_Calls.md = API Calls
+* 200_Something_Else-Cool.md = Something Else-Cool
+* _5_Ways_to_Be_Happy.md = 5 Ways To Be Happy
 
- - **Linux or OS X** — Windows may work, but is unsupported.
- - **Ruby, version 1.9.3 or newer**
- - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
+**Bad:**
 
-### Getting Set Up
+* File Name With Space.md = FAIL
 
- 1. Fork this repository on Github.
- 2. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/slate.git`
- 3. `cd slate`
- 4. Install all dependencies: `bundle install`
- 5. Start the test server: `bundle exec middleman server`
+## Sorting
 
-Or use the included Dockerfile! (must install Docker first)
+To sort your files and folders in a specific way, you can prefix them with a number and underscore, e.g. `/docs/01_Hello_World.md` and `/docs/05_Features.md` This will list *Hello World* before *Features*, overriding the default alpha-numeric sorting. The numbers will be stripped out of the navigation and urls. For the file `6 Ways to Get Rich`, you can use `/docs/_6_Ways_to_Get_Rich.md`
 
-```shell
-docker build -t slate .
-docker run -d -p 4567:4567 slate
+## Landing page
+
+If you want to create a beautiful landing page for your project, simply create a `index.md` file in the root of the `/docs` folder. This file will then be used to create a landing page. You can also add a tagline and image to this page using the config file like this:
+
+```json
+{
+	"title": "Daux.io",
+	"tagline": "The Easiest Way To Document Your Project",
+	"image": "app.png"
+}
 ```
 
-You can now see the docs at <http://localhost:4567>. Whoa! That was fast!
+Note: The image can be a local or remote image. Use the convention `<base_url>` to refer to the root directory of the Daux instance.
 
-*Note: if you're using the Docker setup on OSX, the docs will be
-availalable at the output of `boot2docker ip` instead of `localhost:4567`.*
+## Section landing page
 
-Now that Slate is all set up your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/tripit/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/tripit/slate/wiki/Deploying-Slate).
+If you are interested in having a landing page for a subsection of your docs, all you need to do is add an `index.md` file to the folder. For example, `/docs/01_Examples` has a landing page for that section since there exists a `/docs/01_Examples/index.md` file. If you wish to have an index page for a section without a landing page format, use the name `_index.md`
 
-Examples of Slate in the Wild
----------------------------------
+## Configuration
 
-* [Travis-CI's API docs](http://docs.travis-ci.com/api/)
-* [Mozilla's localForage docs](http://mozilla.github.io/localForage/)
-* [Mozilla Recroom](http://mozilla.github.io/recroom/)
-* [ChaiOne Gameplan API docs](http://chaione.github.io/gameplanb2b/#introduction)
-* [Drcaban's Build a Quine tutorial](http://drcabana.github.io/build-a-quine/#introduction)
-* [PricePlow API docs](https://www.priceplow.com/api/documentation)
-* [Emerging Threats API docs](http://apidocs.emergingthreats.net/)
-* [Appium docs](http://appium.io/slate/en/master)
-* [Golazon Developer](http://developer.golazon.com)
-* [Dwolla API docs](https://docs.dwolla.com/)
-* [RozpisyZapasu API docs](http://www.rozpisyzapasu.cz/dev/api/)
-* [Codestar Framework Docs](http://codestarframework.com/documentation/)
-* [Buddycloud API](http://buddycloud.com/api)
-* [Crafty Clicks API](https://craftyclicks.co.uk/api/)
-* [Paracel API Reference](http://paracel.io/docs/api_reference.html)
-* [Switch Payments Documentation](http://switchpayments.com/docs/) & [API](http://switchpayments.com/developers/)
-* [Coinbase API Reference](https://developers.coinbase.com/api)
-* [Whispir.io API](https://whispir.github.io/api)
-* [NASA API](https://data.nasa.gov/developer/external/planetary/)
-* [CardPay API](https://developers.cardpay.com/)
-* [IBM Cloudant](https://docs-testb.cloudant.com/content-review/_design/couchapp/index.html)
-* [Bitrix basis components](http://bbc.bitrix.expert/)
-* [viagogo API Documentation](http://developer.viagogo.net/)
-* [Fidor Bank API Documentation](http://docs.fidor.de/)
-* [Market Prophit API Documentation](http://developer.marketprophit.com/)
-* [OAuth.io API Documentation](http://docs.oauth.io/)
+To customize the look and feel of your documentation, you can create a `config.json` file in the of the `/docs` folder. The `config.json` file is a simple JSON object that you can use to change some of the basic settings of the documentation.
 
-(Feel free to add your site to this list in a pull request!)
+###Title:
+Change the title bar in the docs
 
-Need Help? Found a bug?
---------------------
+```json
+{
+	"title": "Daux.io"
+}
+```
 
-Just [submit a issue](https://github.com/tripit/slate/issues) to the Slate Github if you need any help. And, of course, feel free to submit pull requests with bug fixes or changes.
+###Themes:
+We have 4 built-in Bootstrap themes. To use one of the themes, just set the `theme` option to one of the following:
+
+* daux-blue
+* daux-green
+* daux-navy
+* daux-red
+
+```json
+{
+	"theme": "daux-blue"
+}
+```
+
+###Custom Theme:
+To use a custom theme, just copy over the theme folder as well as the `.thm` file for that theme into the `themes` directory and set its value in the `theme` param in config.json
+
+```json
+{
+	"theme": "new-theme",
+}
+```
+
+###Code Floating:
+By default your code blocks will be floated to a column on the right side of your content. To disable this feature, set the `float` property to `false`.
+
+```json
+{
+	"float": false
+}
+```
+
+###Toggling Code Blocks
+Some users might wish to hide the code blocks & view just the documentation. By setting the `toggle_code` property to `true`, you can offer a toggle button on the page.
+
+```json
+{
+	"toggle_code": true
+}
+```
 
 
-Contributors
---------------------
+###GitHub Repo:
+Add a 'Fork me on GitHub' ribbon.
 
-Slate was built by [Robert Lord](https://lord.io) while at [TripIt](http://tripit.com).
+```json
+{
+	"repo": "justinwalsh/daux.io"
+}
+```
 
-Thanks to the following people who have submitted major pull requests:
+###Twitter:
+Include twitter follow buttons in the sidebar.
 
-- [@chrissrogers](https://github.com/chrissrogers)
-- [@bootstraponline](https://github.com/bootstraponline)
-- [@realityking](https://github.com/realityking)
+```json
+{
+	"twitter": ["justin_walsh", "todaymade"]
+}
+```
 
-Also, thanks to [Sauce Labs](http://saucelabs.com) for helping sponsor the project.
+###Links:
+Include custom links in the sidebar.
 
-Special Thanks
---------------------
-- [Middleman](https://github.com/middleman/middleman)
-- [jquery.tocify.js](https://github.com/gfranko/jquery.tocify.js)
-- [middleman-syntax](https://github.com/middleman/middleman-syntax)
-- [middleman-gh-pages](https://github.com/neo/middleman-gh-pages)
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+```json
+{
+	"links": {
+		"GitHub Repo": "https://github.com/justinwalsh/daux.io",
+		"Help/Support/Bugs": "https://github.com/justinwalsh/daux.io/issues",
+		"Made by Todaymade": "http://todaymade.com"
+	}
+}
+```
+
+###Google Analytics:
+This will embed the google analytics tracking code.
+
+```json
+{
+	"google_analytics": "UA-XXXXXXXXX-XX"
+}
+```
+
+###Piwik Analytics:
+This will embed the piwik tracking code.
+
+```json
+{
+	"piwik_analytics": "my-url-for-piwik.com"
+}
+```
+
+You can Also give a specific Piwik ID as well.
+
+```json
+{
+	"piwik_analytics_id": "43"
+}
+```
+
+###Ignore:
+Set custom files and entire folders to ignore within your `/docs` folder. For files make sure to include the file extension in the name. For both files and folders, names are case-sensitive.
+
+```json
+	{
+		"ignore": {
+			"files": ["Work_In_Progress.md"],
+			"folders": ["99_Not_Ready"]
+		}
+	}
+```
+
+###Breadcrumb titles
+Daux.io provides the option to present page titles as breadcrumb navigation. You can *optionally* specify the separator used for breadcrumbs.
+
+```json
+{
+		"breadcrumbs": true,
+		"breadcrumb_separator" : " > "
+}
+```
+
+###Date Modified
+By default, daux.io will display the last modified time as reported by the system underneath the title for each document. To disable this, change the option in your config.json to false.
+
+```json
+{
+	"date_modified": false
+}
+```
+
+###Timezone
+If your server does not have a default timezone set in php.ini, it may return errors when it tries to generate the last modified date/time for docs. To fix these errors, specify a timezone in your config file. Valid options are available in the [PHP Manual](http://php.net/manual/en/timezones.php).
+
+```json
+{
+        "timezone": "America/Los_Angeles"
+}
+```
+
+###Inherit Index
+This feature will insruct the router to seek the first available file to use when a request to a folder is made and the index is not found.
+
+```json
+{
+        "live": [
+        	"inherit_index": true
+        ]
+}
+```
+
+###Multi-language
+Enables multi-language support which needs seperate directories for each language in `docs/` folder.
+
+```json
+{
+        "languages": { "en": "English", "de": "German" }
+}
+```
+
+Directory structure:
+```
+├── docs/
+│   ├── index.md
+│   ├── en
+│   │   ├── 00_Getting_Started.md
+│   │   ├── 01_Examples
+│   │   │   ├── 01_GitHub_Flavored_Markdown.md
+│   │   │   ├── 05_Code_Highlighting.md
+│   │   ├── 05_More_Examples
+│   │   │   ├── Hello_World.md
+│   │   │   ├── 05_Code_Highlighting.md
+│   ├── de
+│   │   ├── 00_Getting_Started.md
+│   │   ├── 01_Examples
+│   │   │   ├── 01_GitHub_Flavored_Markdown.md
+│   │   │   ├── 05_Code_Highlighting.md
+│   │   ├── 05_More_Examples
+│   │   │   ├── Hello_World.md
+│   │   │   ├── 05_Code_Highlighting.md
+```
+
+## Running Remotely
+
+Copy the files from the repo to a web server that can run PHP 5.4 or greater.
+
+## Running Locally
+
+There are several ways to run the docs locally. You can use something like <a href="http://www.mamp.info/en/index.html" target="_blank">MAMP</a> or <a href="http://www.wampserver.com/en/" target="_blank">WAMP</a>. If you are like me and use alot of Node.js and <a href="http://gruntjs.com/" target="_blank">Grunt.js</a>, then you can use the optional grunt command I have packaged with the project which will start a PHP web server for you in the project folder.
+
+The Grunt.js task uses the built in web server in PHP 5.4 to host the docs on your local machine. This is really only intended be used when you are writing/updating a ton of docs and want to preview the changes locally.
+
+**To use the optional Grunt command you will need:**
+
+* Node.js
+* npm
+* Grunt.js
+* PHP 5.4 or greater (This is because of the built-in web server packaged in 5.4)
+
+This project contains a package.json file, so once you have the requirements installed, you can simply run a `npm install` and then `grunt` in the projects folder to start the local web server. By default the server will run at: <a href="http://localhost:8085" target="_blank">http://localhost:8085</a>
+
+## Generating a set of static files
+
+These can be uploaded to a static site hosting service such as pages.github.com
+
+Generating a complete set of pages, with navigation
+
+```bash
+php generate.php [global.json Relative Location] [Output Directory Relative Direction]
+```
+
+## Running on IIS
+
+If you have set up a local or remote IIS web site, you may need a `web.config` with:
+
+* A rewrite configuration, for handling clean urls.
+* A mime type handler for less files, if using a custom theme.
+
+### Clean URLs
+
+The `web.config` needs an entry for `<rewrite>` under `<system.webServer>`:
+
+```xml
+<configuration>
+	<system.webServer>
+		<rewrite>
+			<rules>
+				<rule name="Main Rule" stopProcessing="true">
+					<match url=".*" />
+					<conditions logicalGrouping="MatchAll">
+						<add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+						<add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+					</conditions>
+					<action type="Rewrite" url="index.php" appendQueryString="false" />
+				</rule>
+			</rules>
+		</rewrite>
+	</system.webServer>
+</configuration>
+```
+
+To use clean URLs on IIS 6, you will need to use a custom URL rewrite module, such as [URL Rewriter](http://urlrewriter.net/).
+
+### Less Mime Type
+
+The `web.config` needs a new `<mimeMap>` entry, under `<staticContent>` in `<system.webServer>`:
+
+```xml
+<staticContent>
+	<mimeMap fileExtension=".less" mimeType="text/css" />
+</staticContent>
+```
+
+You will only need the mime map entry if you are using a custom theme and receive 404s for `.less` files.
+
+If you have a global mime map entry for `.less` files set for the server, you will receive an internal server (500) error for having duplicate mime map entries.
+
+## Support
+
+If you need help using Daux.io, or have found a bug, please create an issue on the <a href="https://github.com/justinwalsh/daux.io/issues" target="_blank">GitHub repo</a>.

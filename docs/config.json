@@ -1,0 +1,25 @@
+{
+    "title": "PIF Documentation",
+    "tagline": "Documentation of the Physical Information File (PIF) schema",
+    "author": "Kyle Michel",
+    "ignore": {
+            "files": [""],
+            "folders": [""]
+    },
+    "live": {
+        "inherit_index": true,
+        "clean_urls": true
+    },
+    "html": {
+        "theme": "daux-navy",
+        "toggle_code": true,
+        "date_modified": true,
+        "float": false,
+        "links": {
+            "pypif": "https://github.com/CitrineInformatics/pypif",
+            "jpif": "https://github.com/CitrineInformatics/jpif",
+            "Citrination API": "http://www.citrine.io/api",
+            "Citrine Informatics": "http://www.citrine.io"
+        }
+    }
+}
