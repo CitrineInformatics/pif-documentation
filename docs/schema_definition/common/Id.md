@@ -1,4 +1,4 @@
-An ID is just a named label.
+An ID is a named label.
 
 Field name | Value type | Description
 -----------|------------|------------
