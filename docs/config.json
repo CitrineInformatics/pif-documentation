@@ -12,7 +12,7 @@
     },
     "html": {
         "theme": "daux-navy",
-        "toggle_code": true,
+        "toggle_code": false,
         "date_modified": true,
         "float": false,
         "links": {
