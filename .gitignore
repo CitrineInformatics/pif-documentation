@@ -1,3 +1,4 @@
+static
 *.gem
 *.rbc
 .bundle
