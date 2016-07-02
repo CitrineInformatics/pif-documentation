@@ -13,9 +13,9 @@ Field name | Value type | Description
 `issue` | String | Issue of the series in which the work was published.
 `year` | String | Year in which the work was published.
 `pages` | [`Pages`](!schema_definition/common/Pages) object | Starting and ending pages of the work.
-`authors` | Array of [`Name`] objects | Authors of the work.
-`editors` | Array of [`Name`] objects | Editors of the work.
+`authors` | Array of [`Name`](!schema_definition/common/Name) objects | Authors of the work.
+`editors` | Array of [`Name`](!schema_definition/common/Name) objects | Editors of the work.
 `affiliations` | Array of strings | One or more affiliations of the authors or editors of the work.
 `acknowledgements` | Array of strings | One or more acknowledgements made in the work.
-`references` | Array of [`Reference`] objects | Publications cited by the work.
+`references` | Array of [`Reference`](!schema_definition/common/Reference) objects | Publications cited by the work.
 `tags` | Array of strings | Tags that apply to the reference.
