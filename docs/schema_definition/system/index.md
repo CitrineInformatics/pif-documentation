@@ -2,7 +2,7 @@ A system is a root level object in a PIF record. Systems contain three general c
 
 * Identifiers - What is this?
 * Preparation - How was this made?
-* Properties - How does this perform?
+* Properties - How does this perform and what are its characteristics?
 
 Additionally, systems can contain publication information for the system, contact information for people that worked on or the system, and licensing information.
 
