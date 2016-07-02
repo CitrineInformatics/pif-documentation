@@ -1,4 +1,8 @@
+## Description
+
 An ID is a named label.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -6,7 +10,9 @@ Field name | Value type | Description
 `value` | String | Value of the identifier.
 `tags` | Array of strings | Tags that apply to the ID.
 
-<br>Example: Store the CAS number of MgO<sub>2</sub>.
+## Examples
+
+Store the CAS number of MgO<sub>2</sub>
 ```javascript
 {
     "name": "CAS",

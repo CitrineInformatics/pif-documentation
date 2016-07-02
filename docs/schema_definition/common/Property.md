@@ -1,4 +1,8 @@
+## Description
+
 A property is a single measured or observed characteristic or response of a system. Exactly one of `scalars`, `vectors`, or `matrices` should be set. Any applied conditions should be stored under the `conditions` field. Two-dimensional data can be stored by setting, for example, _N_ (> 1) values in the `scalars` field along with a condition that contained _N_ values in its `scalars` field.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -14,3 +18,5 @@ Field name | Value type | Description
 `contacts` | Array of [`Person`](!schema_definition/common/Person) objects | People that can be contacted for further information about the property.
 `licenses` | Array of [`License`](!schema_definition/common/License) objects | Licenses that apply to the data about the property.
 `tags` | Array of strings | Tags that apply to the property.
+
+## Examples

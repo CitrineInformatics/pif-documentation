@@ -1,4 +1,8 @@
+## Description
+
 Information about a person.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -6,3 +10,5 @@ Field name | Value type | Description
 `email` | String | Email address of the person.
 `orcid` | String | [ORCID](http://orcid.org) ID of the person.
 `tags` | Array of strings | Tags that apply to the person.
+
+## Examples

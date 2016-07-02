@@ -1,4 +1,8 @@
+## Description
+
 An `Alloy` is a specialization of the more generic [`ChemicalSystem`](!schema_definition/system/chemical/ChemicalSystem) type. Alloys simply alias the `subSystems` field of `ChemicalSystem` as `phases` in implementations of the schema in code. The serialized version of the `Alloy` objects and [`ChemicalSystem`](!schema_definition/system/chemical/ChemicalSystem) objects are the same.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -13,3 +17,5 @@ Field name | Value type | Description
 `contacts` | Array of [`Person`](!schema_definition/common/Person) objects | People that can be contacted for further information about the alloy.
 `licenses` | Array of [`License`](!schema_definition/common/License) objects | Licenses that apply to the data about the alloy.
 `tags` | Array of strings | Tags that apply to the alloy.
+
+## Examples

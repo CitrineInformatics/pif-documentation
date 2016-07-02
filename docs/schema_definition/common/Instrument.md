@@ -1,5 +1,7 @@
+## Description
 An instrument is a piece of physical equipment that was used in a measurement or other application.
 
+## Fields
 Field name | Value type | Description
 -----------|------------|------------
 `name` | String | Name of the instrument.
@@ -7,3 +9,5 @@ Field name | Value type | Description
 `producer` | String | Manufacturer of the instrument.
 `url` | String | URL to the website with information about the instrument.
 `tags` | Array of strings | Tags that apply to the instrument.
+
+## Examples

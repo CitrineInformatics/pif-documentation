@@ -1,4 +1,8 @@
+## Description
+
 Information about an element in a chemical system including its type and relative amount.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -8,3 +12,5 @@ Field name | Value type | Description
 `actualAtomicPercent` | [`Scalar`](!schema_definition/common/Scalar) object | Actual (measured) atomic percent of the element.
 `idealAtomicPercent` | [`Scalar`](!schema_definition/common/Scalar) object | Ideal (theoretical/stoichiometric) atomic percent of the element.
 `tags` | Array of strings | Tags that apply to the composition.
+
+## Examples

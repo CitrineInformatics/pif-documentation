@@ -1,4 +1,8 @@
+## Description
+
 A `System` object is the most generic representation of a physical system in the PIF schema. All other systems are sub-classed from this type.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -11,3 +15,5 @@ Field name | Value type | Description
 `contacts` | Array of [`Person`](!schema_definition/common/Person) objects | People that can be contacted for further information about the system.
 `licenses` | Array of [`License`](!schema_definition/common/License) objects | Licenses that apply to the data about the system.
 `tags` | Array of strings | Tags that apply to the system.
+
+## Examples

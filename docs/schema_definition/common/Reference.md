@@ -1,4 +1,8 @@
+## Description
+
 A published work.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -19,3 +23,5 @@ Field name | Value type | Description
 `acknowledgements` | Array of strings | One or more acknowledgements made in the work.
 `references` | Array of [`Reference`](!schema_definition/common/Reference) objects | Publications cited by the work.
 `tags` | Array of strings | Tags that apply to the reference.
+
+## Examples

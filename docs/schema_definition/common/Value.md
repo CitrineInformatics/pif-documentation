@@ -1,4 +1,8 @@
+## Description
+
 A single scalar, vector, or matrix, or an array of one of those. Exactly one of `scalars`, `vectors`, or `matrices` should be set.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -8,3 +12,5 @@ Field name | Value type | Description
 `matrices` | Array of arrays of arrays of [`Scalar`](!schema_definition/common/Scalar) objects | One or more arrays of arrays of scalars, where each represents a single matrix (with innermost arrays being rows of the matrix).
 `units` | String | Units of the value.
 `tags` | Array of strings | Tags that apply to the value.
+
+## Examples

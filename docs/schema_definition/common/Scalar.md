@@ -1,4 +1,8 @@
+## Description
+
 A single value that can represent an absolute value, an uncertain value, a range of values, a minimum, or a maximum.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -10,3 +14,5 @@ Field name | Value type | Description
 `uncertainty` | String | Uncertainty in the value.
 `approximate` | Boolean (True or False) | Whether the value is approximate.
 `tags` | Array of strings | Tags that apply to the scalar.
+
+## Examples

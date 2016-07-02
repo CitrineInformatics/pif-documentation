@@ -1,4 +1,8 @@
+## Description
+
 A `ChemicalSystem` is a specialization of the more generic [`System`](!schema_definition/system/System) type. Chemical systems add information about chemical composition to a system.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -13,3 +17,5 @@ Field name | Value type | Description
 `contacts` | Array of [`Person`](!schema_definition/common/Person) objects | People that can be contacted for further information about the chemical system.
 `licenses` | Array of [`License`](!schema_definition/common/License) objects | Licenses that apply to the data about the chemical system.
 `tags` | Array of strings | Tags that apply to the chemical system.
+
+## Examples

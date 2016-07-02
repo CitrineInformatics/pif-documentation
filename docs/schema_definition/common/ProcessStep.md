@@ -1,4 +1,8 @@
+## Description
+
 A process step is a single stage in a set of preparation steps.
+
+## Fields
 
 Field name | Value type | Description
 -----------|------------|------------
@@ -7,3 +11,5 @@ Field name | Value type | Description
 `instruments` | Array of [`Instrument`](!schema_definition/common/Instrument) objects | Instruments that were used during the process step.
 `software` | Array of [`Software`](!schema_definition/common/Software) objects | Software packages that were used during the process step.
 `tags` | Array of strings | Tags that apply to the process step.
+
+## Examples
