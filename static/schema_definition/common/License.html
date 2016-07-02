@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>License - PIF Documentation</title>
+    <meta name="description" content="Documentation of the Physical Information File (PIF) schema" />
+    <meta name="author" content="Kyle Michel">
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../themes/daux/img/favicon-navy.png" type="image/x-icon">
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href='../../themes/daux/css/theme.min.css' rel='stylesheet' type='text/css'><link href='../../themes/daux/css/theme-navy.min.css' rel='stylesheet' type='text/css'>
+            <!-- Tipue Search -->
+        <link href="../../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="">
+    
+<div class="container-fluid fluid-height wrapper">
+    <div class="navbar navbar-static-top hidden-print">
+        <div class="container-fluid">
+            <a class="brand navbar-brand pull-left" href="../../index.html">PIF Documentation</a>
+
+    <div class="navbar-right navbar-form search">
+        <i class="glyphicon glyphicon-search search__icon">&nbsp;</i>
+        <input type="search" id="tipue_search_input" class="form-control search__field" placeholder="Search..." autocomplete="on" results=25 autosave=text_search>
+    </div>
+        </div>
+    </div>
+    <div class="row columns content">
+        <div class="left-column article-tree col-sm-3 hidden-print">
+            <!-- For Mobile -->
+            <div class="responsive-collapse">
+                <button type="button" class="btn btn-sidebar" id="menu-spinner-button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="sub-nav-collapse" class="sub-nav-collapse">
+                <!-- Navigation -->
+                <ul class='nav nav-list'><li class='open has-children'><a href="../../schema_definition/index.html" class="folder"><i class="arrow">&nbsp;</i>schema definition</a><ul class='nav nav-list'><li class='open has-children'><a href="../../schema_definition/common/index.html" class="folder"><i class="arrow">&nbsp;</i>common</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/common/Id.html">Id</a></li><li class=''><a href="../../schema_definition/common/Instrument.html">Instrument</a></li><li class='active'><a href="../../schema_definition/common/License.html">License</a></li><li class=''><a href="../../schema_definition/common/Method.html">Method</a></li><li class=''><a href="../../schema_definition/common/Name.html">Name</a></li><li class=''><a href="../../schema_definition/common/Pages.html">Pages</a></li><li class=''><a href="../../schema_definition/common/Person.html">Person</a></li><li class=''><a href="../../schema_definition/common/ProcessStep.html">ProcessStep</a></li><li class=''><a href="../../schema_definition/common/Property.html">Property</a></li><li class=''><a href="../../schema_definition/common/Reference.html">Reference</a></li><li class=''><a href="../../schema_definition/common/Scalar.html">Scalar</a></li><li class=''><a href="../../schema_definition/common/Software.html">Software</a></li><li class=''><a href="../../schema_definition/common/Value.html">Value</a></li></ul></li><li class=' has-children'><a href="../../schema_definition/system/index.html" class="folder"><i class="arrow">&nbsp;</i>system</a><ul class='nav nav-list'><li class=' has-children'><a href="../../schema_definition/system/chemical/index.html" class="folder"><i class="arrow">&nbsp;</i>chemical</a><ul class='nav nav-list'><li class=' has-children'><a href="../../schema_definition/system/chemical/alloy/index.html" class="folder"><i class="arrow">&nbsp;</i>alloy</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/system/chemical/alloy/Alloy.html">Alloy</a></li></ul></li><li class=''><a href="../../schema_definition/system/chemical/ChemicalSystem.html">ChemicalSystem</a></li><li class=' has-children'><a href="../../schema_definition/system/chemical/common/index.html" class="folder"><i class="arrow">&nbsp;</i>common</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/system/chemical/common/Composition.html">Composition</a></li></ul></li></ul></li><li class=''><a href="../../schema_definition/system/System.html">System</a></li></ul></li></ul></li></ul>
+
+                <div class="sidebar-links">
+                    
+                        <!-- Links -->
+                        <a href="https://github.com/CitrineInformatics/pypif" target="_blank">pypif</a><br><a href="https://github.com/CitrineInformatics/jpif" target="_blank">jpif</a><br><a href="http://www.citrine.io/api" target="_blank">Citrination API</a><br><a href="http://www.citrine.io" target="_blank">Citrine Informatics</a><br>
+                        <div id="toggleCodeBlock">
+                                                    <a id="toggleCodeBlockBtn" href="#" onclick="toggleCodeBlocks();">Show Code Blocks Inline</a><br>
+                                                </div>
+
+                        <!-- Twitter -->
+                        
+                        <hr/>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right-column  content-area col-sm-9">
+
+            <div class="content-page">
+                                    <div id="tipue_search_content" style="display:none"></div>
+                
+                <div class="doc_content">
+                    <article>
+            <div class="page-header sub-header clearfix">
+            <h1>License</h1>
+            <span style="float: left; font-size: 10px; color: gray;">
+                Friday, July 1, 2016            </span>
+            <span style="float: right; font-size: 10px; color: gray;">
+                11:06 PM            </span>
+        </div>
+    
+    <p>A license describes the licensing agreement that is in place for the data in the object in which it is applied.</p>
+<table>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Value type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Name of the license.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>String</td>
+<td>Description of the license.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>String</td>
+<td>URL to the website with information about the license.</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Array of strings</td>
+<td>Tags that apply to the license.</td>
+</tr>
+</tbody>
+</table>
+
+        <nav>
+        <ul class="pager">
+            <li><a href="../../schema_definition/common/Instrument.html">Previous</a></li>            <li><a href="../../schema_definition/common/Method.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- jQuery -->
+    <script src="../../themes/daux/js/jquery-1.11.3.min.js"></script>
+
+    <!-- hightlight.js -->
+    <script src="../../themes/daux/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- JS -->
+    
+    <script src="../../themes/daux/js/daux.js"></script>
+
+            <!-- Tipue Search -->
+        <script type="text/javascript" src="../../tipuesearch/tipuesearch_set.js"></script>
+        <script type="text/javascript" src="../../tipuesearch/tipuesearch.min.js"></script>
+
+        <script>
+            window.onunload = function(){}; // force $(document).ready to be called on back/forward navigation in firefox
+            $(document).ready(function() {
+                $('#tipue_search_input').tipuesearch({
+                    'show': 10,
+                    'mode': 'json',
+                    'base_url': '../../'
+                });
+            });
+        </script>
+    
+</body>
+</html>
