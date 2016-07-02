@@ -15,5 +15,7 @@ Field name | Value type | Description
 `pages` | [`Pages`](!schema_definition/common/Pages) object | Starting and ending pages of the work.
 `authors` | Array of [`Name`] objects | Authors of the work.
 `editors` | Array of [`Name`] objects | Editors of the work.
+`affiliations` | Array of strings | One or more affiliations of the authors or editors of the work.
+`acknowledgements` | Array of strings | One or more acknowledgements made in the work.
 `references` | Array of [`Reference`] objects | Publications cited by the work.
 `tags` | Array of strings | Tags that apply to the reference.
