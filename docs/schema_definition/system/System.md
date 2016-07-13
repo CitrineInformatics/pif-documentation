@@ -8,6 +8,7 @@ Field name | Value type | Description
 -----------|------------|------------
 `names` | Array of strings | Common names of the system.
 `ids` | Array of [`Id`](!schema_definition/common/Id) objects | IDs (named labels) of the system.
+`source` | [`Source`](!schema_definition/common/Source) object | Source/producer/manufacturer of the system.
 `properties` | Array of [`Property`](!schema_definition/common/Property) objects | Measured or observed properties.
 `preparation` | Array of [`ProcessStep`](!schema_definition/common/ProcessStep) objects | Process steps carried out in preparing the system.
 `subSystems` | Array of [`System`](!schema_definition/system/System) objects | Subsystems that the system is composed of.

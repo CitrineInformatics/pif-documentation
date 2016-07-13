@@ -10,6 +10,7 @@ Field name | Value type | Description
 `composition` | Array of [`Composition`](!schema_definition/system/chemical/common/Composition) objects | The elements in the chemical system and their relative atomic and weight percentages.
 `names` | Array of strings | Common names of the chemical system.
 `ids` | Array of [`Id`](!schema_definition/common/Id) objects | IDs (named labels) of the chemical system.
+`source` | [`Source`](!schema_definition/common/Source) object | Source/producer/manufacturer of the chemical system.
 `properties` | Array of [`Property`](!schema_definition/common/Property) objects | Measured or observed properties.
 `preparation` | Array of [`ProcessStep`](!schema_definition/common/ProcessStep) objects | Process steps carried out in preparing the chemical system.
 `subSystems` | Array of [`System`](!schema_definition/system/System) objects | Subsystems that the chemical system is composed of.
