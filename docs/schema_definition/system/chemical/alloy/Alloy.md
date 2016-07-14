@@ -6,6 +6,7 @@ An `Alloy` is a specialization of the more generic [`ChemicalSystem`](!schema_de
 
 Field name | Value type | Description
 -----------|------------|------------
+`uid` | String | Permanent ID associated with the alloy.
 `chemicalFormula` | String | Chemical formula of the alloy.
 `composition` | Array of [`Composition`](!schema_definition/system/chemical/common/Composition) objects | The elements in the alloy and their relative atomic and weight percentages.
 `names` | Array of strings | Common names of the alloy.

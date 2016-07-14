@@ -6,6 +6,7 @@ A `System` object is the most generic representation of a physical system in the
 
 Field name | Value type | Description
 -----------|------------|------------
+`uid` | String | Permanent ID associated with the system.
 `names` | Array of strings | Common names of the system.
 `ids` | Array of [`Id`](!schema_definition/common/Id) objects | IDs (named labels) of the system.
 `source` | [`Source`](!schema_definition/common/Source) object | Source/producer/manufacturer of the system.

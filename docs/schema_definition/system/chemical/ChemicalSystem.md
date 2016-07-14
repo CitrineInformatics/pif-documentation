@@ -6,6 +6,7 @@ A `ChemicalSystem` is a specialization of the more generic [`System`](!schema_de
 
 Field name | Value type | Description
 -----------|------------|------------
+`uid` | String | Permanent ID associated with the chemical system.
 `chemicalFormula` | String | Chemical formula of the system.
 `composition` | Array of [`Composition`](!schema_definition/system/chemical/common/Composition) objects | The elements in the chemical system and their relative atomic and weight percentages.
 `names` | Array of strings | Common names of the chemical system.
