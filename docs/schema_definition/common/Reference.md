@@ -16,6 +16,8 @@ Field name | Value type | Description
 `volume` | String | Volume of the series in which the work was published.
 `issue` | String | Issue of the series in which the work was published.
 `year` | String | Year in which the work was published.
+`figure` | [`DisplayItem`](!schema_definition/common/DisplayItem) object | A specific figure being referenced.
+`table` | [`DisplayItem`](!schema_definition/common/DisplayItem) object | A specific table being referenced.
 `pages` | [`Pages`](!schema_definition/common/Pages) object | Starting and ending pages of the work.
 `authors` | Array of [`Name`](!schema_definition/common/Name) objects | Authors of the work.
 `editors` | Array of [`Name`](!schema_definition/common/Name) objects | Editors of the work.
