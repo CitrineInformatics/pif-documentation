@@ -11,3 +11,12 @@ Field name | Value type | Description
 `tags` | Array of strings | Tags that apply to the instrument.
 
 ## Examples
+
+Store information about a Bruker NANOSTAR X-ray diffraction instrument:
+```javascript
+{
+    "producer": "Bruker",
+    "model": "NANOSTAR",
+    "url": "https://www.bruker.com/products/x-ray-diffraction-and-elemental-analysis/x-ray-diffraction/nanostar"
+}
+```
