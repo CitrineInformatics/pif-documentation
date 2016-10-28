@@ -49,7 +49,7 @@
             </div>
             <div id="sub-nav-collapse" class="sub-nav-collapse">
                 <!-- Navigation -->
-                <ul class='nav nav-list'><li class='open has-children'><a href="../../schema_definition/index.html" class="folder"><i class="arrow">&nbsp;</i>schema definition</a><ul class='nav nav-list'><li class='open has-children'><a href="../../schema_definition/common/index.html" class="folder"><i class="arrow">&nbsp;</i>common</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/common/DisplayItem.html">DisplayItem</a></li><li class=''><a href="../../schema_definition/common/Id.html">Id</a></li><li class=''><a href="../../schema_definition/common/Instrument.html">Instrument</a></li><li class=''><a href="../../schema_definition/common/License.html">License</a></li><li class=''><a href="../../schema_definition/common/Method.html">Method</a></li><li class=''><a href="../../schema_definition/common/Name.html">Name</a></li><li class=''><a href="../../schema_definition/common/Pages.html">Pages</a></li><li class=''><a href="../../schema_definition/common/Person.html">Person</a></li><li class=''><a href="../../schema_definition/common/ProcessStep.html">ProcessStep</a></li><li class='active'><a href="../../schema_definition/common/Property.html">Property</a></li><li class=''><a href="../../schema_definition/common/Quantity.html">Quantity</a></li><li class=''><a href="../../schema_definition/common/Reference.html">Reference</a></li><li class=''><a href="../../schema_definition/common/Scalar.html">Scalar</a></li><li class=''><a href="../../schema_definition/common/Software.html">Software</a></li><li class=''><a href="../../schema_definition/common/Source.html">Source</a></li><li class=''><a href="../../schema_definition/common/Value.html">Value</a></li></ul></li><li class=' has-children'><a href="../../schema_definition/system/index.html" class="folder"><i class="arrow">&nbsp;</i>system</a><ul class='nav nav-list'><li class=' has-children'><a href="../../schema_definition/system/chemical/index.html" class="folder"><i class="arrow">&nbsp;</i>chemical</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/system/chemical/ChemicalSystem.html">ChemicalSystem</a></li><li class=' has-children'><a href="../../schema_definition/system/chemical/common/index.html" class="folder"><i class="arrow">&nbsp;</i>common</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/system/chemical/common/Composition.html">Composition</a></li></ul></li></ul></li><li class=''><a href="../../schema_definition/system/System.html">System</a></li></ul></li></ul></li></ul>
+                <ul class='nav nav-list'><li class='open has-children'><a href="../../schema_definition/index.html" class="folder"><i class="arrow">&nbsp;</i>schema definition</a><ul class='nav nav-list'><li class='open has-children'><a href="../../schema_definition/common/index.html" class="folder"><i class="arrow">&nbsp;</i>common</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/common/DisplayItem.html">DisplayItem</a></li><li class=''><a href="../../schema_definition/common/FileReference.html">FileReference</a></li><li class=''><a href="../../schema_definition/common/Id.html">Id</a></li><li class=''><a href="../../schema_definition/common/Instrument.html">Instrument</a></li><li class=''><a href="../../schema_definition/common/License.html">License</a></li><li class=''><a href="../../schema_definition/common/Method.html">Method</a></li><li class=''><a href="../../schema_definition/common/Name.html">Name</a></li><li class=''><a href="../../schema_definition/common/Pages.html">Pages</a></li><li class=''><a href="../../schema_definition/common/Person.html">Person</a></li><li class=''><a href="../../schema_definition/common/ProcessStep.html">ProcessStep</a></li><li class='active'><a href="../../schema_definition/common/Property.html">Property</a></li><li class=''><a href="../../schema_definition/common/Quantity.html">Quantity</a></li><li class=''><a href="../../schema_definition/common/Reference.html">Reference</a></li><li class=''><a href="../../schema_definition/common/Scalar.html">Scalar</a></li><li class=''><a href="../../schema_definition/common/Software.html">Software</a></li><li class=''><a href="../../schema_definition/common/Source.html">Source</a></li><li class=''><a href="../../schema_definition/common/Value.html">Value</a></li></ul></li><li class=' has-children'><a href="../../schema_definition/system/index.html" class="folder"><i class="arrow">&nbsp;</i>system</a><ul class='nav nav-list'><li class=' has-children'><a href="../../schema_definition/system/chemical/index.html" class="folder"><i class="arrow">&nbsp;</i>chemical</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/system/chemical/ChemicalSystem.html">ChemicalSystem</a></li><li class=' has-children'><a href="../../schema_definition/system/chemical/common/index.html" class="folder"><i class="arrow">&nbsp;</i>common</a><ul class='nav nav-list'><li class=''><a href="../../schema_definition/system/chemical/common/Composition.html">Composition</a></li></ul></li></ul></li><li class=''><a href="../../schema_definition/system/System.html">System</a></li></ul></li></ul></li></ul>
 
                 <div class="sidebar-links">
                     
@@ -75,13 +75,13 @@
             <div class="page-header sub-header clearfix">
             <h1>Property</h1>
             <span style="float: left; font-size: 10px; color: gray;">
-                Saturday, July 2, 2016            </span>
+                Friday, October 28, 2016            </span>
             <span style="float: right; font-size: 10px; color: gray;">
-                12:48 AM            </span>
+                4:13 PM            </span>
         </div>
     
     <h2 id="page_Description">Description</h2>
-<p>A property is a single measured or observed characteristic or response of a system. Exactly one of <code>scalars</code>, <code>vectors</code>, or <code>matrices</code> should be set. Any applied conditions should be stored under the <code>conditions</code> field. Two-dimensional data can be stored by setting, for example, <em>N</em> (&gt; 1) values in the <code>scalars</code> field along with a condition that contained <em>N</em> values in its <code>scalars</code> field.</p>
+<p>A property is a single measured or observed characteristic or response of a system. Exactly one of <code>scalars</code>, <code>vectors</code>, <code>matrices</code>, or <code>files</code> should be set. Any applied conditions should be stored under the <code>conditions</code> field. Two-dimensional data can be stored by setting, for example, <em>N</em> (&gt; 1) values in the <code>scalars</code> field along with a condition that contained <em>N</em> values in its <code>scalars</code> field.</p>
 <h2 id="page_Fields">Fields</h2>
 <table>
 <thead>
@@ -111,6 +111,11 @@
 <td><code>matrices</code></td>
 <td>Array of arrays of arrays of <a href="../../schema_definition/common/Scalar.html"><code>Scalar</code></a> objects</td>
 <td>One or more arrays of arrays of scalars, where each represents a single matrix (with innermost arrays being rows of the matrix).</td>
+</tr>
+<tr>
+<td><code>files</code></td>
+<td>Array of <a href="../../schema_definition/common/FileReference.html"><code>FileReference</code></a> objects</td>
+<td>One or more files that contain information about a property.</td>
 </tr>
 <tr>
 <td><code>units</code></td>
