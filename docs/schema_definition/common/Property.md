@@ -1,6 +1,6 @@
 ## Description
 
-A property is a single measured or observed characteristic or response of a system. Exactly one of `scalars`, `vectors`, or `matrices` should be set. Any applied conditions should be stored under the `conditions` field. Two-dimensional data can be stored by setting, for example, _N_ (> 1) values in the `scalars` field along with a condition that contained _N_ values in its `scalars` field.
+A property is a single measured or observed characteristic or response of a system. Exactly one of `scalars`, `vectors`, `matrices`, or `files` should be set. Any applied conditions should be stored under the `conditions` field. Two-dimensional data can be stored by setting, for example, _N_ (> 1) values in the `scalars` field along with a condition that contained _N_ values in its `scalars` field.
 
 ## Fields
 
@@ -10,6 +10,7 @@ Field name | Value type | Description
 `scalars` | Array of [`Scalar`](!schema_definition/common/Scalar) objects | One or more scalar values that were obtained for the property.
 `vectors` | Array of arrays of [`Scalar`](!schema_definition/common/Scalar) objects | One or more arrays of scalars, where each inner array represents a vector that was obtained for the property.
 `matrices` | Array of arrays of arrays of [`Scalar`](!schema_definition/common/Scalar) objects | One or more arrays of arrays of scalars, where each represents a single matrix (with innermost arrays being rows of the matrix).
+`files` | Array of [`FileReference`](!schema_definition/common/FileReference) objects | One or more files that contain information about a property.
 `units` | String | Units of the property value.
 `conditions` | Array of [`Value`](!schema_definition/common/Value) objects | External conditions under which the property was measured or observed.
 `methods` | Array of [`Method`](!schema_definition/common/Method) objects | Methods that were used in the measurement of the property.
