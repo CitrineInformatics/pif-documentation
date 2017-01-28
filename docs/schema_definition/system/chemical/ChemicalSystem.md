@@ -11,6 +11,7 @@ Field name | Value type | Description
 `composition` | Array of [`Composition`](!schema_definition/system/chemical/common/Composition) objects | The elements in the chemical system and their relative atomic and weight percentages.
 `names` | Array of strings | Common names of the chemical system.
 `ids` | Array of [`Id`](!schema_definition/common/Id) objects | IDs (named labels) of the chemical system.
+`classifications` | Array of [`Classification`](!schema_definition/common/Classification) objects | Classifications (unambiguous categories) of the chemical system.
 `source` | [`Source`](!schema_definition/common/Source) object | Source/producer/manufacturer of the chemical system.
 `quantity` | [`Quantity`](!schema_definition/common/Quantity) object | Quantity of the chemical system.
 `properties` | Array of [`Property`](!schema_definition/common/Property) objects | Measured or observed properties.

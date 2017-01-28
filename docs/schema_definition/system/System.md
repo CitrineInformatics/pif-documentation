@@ -9,6 +9,7 @@ Field name | Value type | Description
 `uid` | String | Permanent ID associated with the system.
 `names` | Array of strings | Common names of the system.
 `ids` | Array of [`Id`](!schema_definition/common/Id) objects | IDs (named labels) of the system.
+`classifications` | Array of [`Classification`](!schema_definition/common/Classification) objects | Classifications (unambiguous categories) of the system.
 `source` | [`Source`](!schema_definition/common/Source) object | Source/producer/manufacturer of the system.
 `quantity` | [`Quantity`](!schema_definition/common/Quantity) object | Quantity of the system.
 `properties` | Array of [`Property`](!schema_definition/common/Property) objects | Measured or observed properties.
