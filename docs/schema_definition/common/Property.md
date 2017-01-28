@@ -14,7 +14,7 @@ Field name | Value type | Description
 `units` | String | Units of the property value.
 `conditions` | Array of [`Value`](!schema_definition/common/Value) objects | External conditions under which the property was measured or observed.
 `methods` | Array of [`Method`](!schema_definition/common/Method) objects | Methods that were used in the measurement of the property.
-`dataType` | "MACHINE_LEARNING", "COMPUTATIONAL", or "EXPERIMENTAL" | Whether the property was obtained from machine learning, computational methods, or experiment.
+`dataType` | "MACHINE_LEARNING", "FIT", "COMPUTATIONAL", or "EXPERIMENTAL" | Whether the property was obtained from machine learning, a fit to some data, computational methods, or experiment.
 `references` | Array of [`Reference`](!schema_definition/common/Reference) objects | References where information about the property is published.
 `contacts` | Array of [`Person`](!schema_definition/common/Person) objects | People that can be contacted for further information about the property.
 `licenses` | Array of [`License`](!schema_definition/common/License) objects | Licenses that apply to the data about the property.
